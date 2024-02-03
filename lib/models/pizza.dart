@@ -11,6 +11,13 @@ class Pizza {
   int taille = 1;
   int sauce = 0;
 
+  Pizza.fromJson(Map<String, dynamic> json) :
+        id = json['id'],
+        title = json['title'],
+        garniture = json['garniture'],
+        image = json['image'],
+        price = json["price"];
+
   static final List<OptionItem> pates = [
     OptionItem(0, "Pâte fine"),
     OptionItem(1, "Pâte épaisse", supplement: 2),
@@ -39,4 +46,5 @@ class Pizza {
   }
 
   Pizza(this.id, this.title, this.garniture, this.image, this.price);
+
 }

@@ -61,7 +61,7 @@ class _PanierState extends State<Panier> {
         padding: const EdgeInsets.all(8.0),
         child: Row(
           children: [
-            Image.asset('assets/images/pizzas/${item.pizza.image}', width: 100),
+            Image.network(item.pizza.image, width: 100),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
